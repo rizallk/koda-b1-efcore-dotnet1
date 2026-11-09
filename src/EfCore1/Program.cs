@@ -27,10 +27,11 @@ builder.Services.AddProblemDetails(
 
 builder.Services.AddExceptionHandler<GlobalExceptionHandler>();
 
-builder.Services.AddScoped(sp => new SqlConnection(builder.Configuration.GetConnectionString("ecommerce")));
-
 // Repository
-builder.Services.AddScoped<IProductRepository, SqlProductRepository>();
+// builder.Services.AddScoped<IProductRepository, SqlProductRepository>();
+
+// EFCORE REPOSITORY
+builder.Services.AddScoped<IProductRepository, EfProductRepository>();
 
 // Service
 builder.Services.AddScoped<IProductService, ProductService>();

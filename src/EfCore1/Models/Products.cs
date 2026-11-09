@@ -3,11 +3,11 @@ namespace EfCore1
 
 public sealed class Product
 {
-  public string ProductCode { get; }
-  public string Name { get; }
-  public decimal Price { get; }
-  public int Stock { get; }
-  public string Category { get; }
+  public string ProductCode { get; private set; }
+  public string Name { get; private set; }
+  public decimal Price { get; private set; }
+  public int Stock { get; private set; }
+  public string Category { get; private set; }
 
   public Product(string productCode, string name, decimal price, int stock, string category)
   {
@@ -36,5 +36,15 @@ public sealed class Product
     Price = price;
     Stock = stock;
     Category = category.Trim();
+  }
+
+  public void UpdateDetail(string name, decimal price, int stock, string category)
+  {
+    var validated = new Product(ProductCode, name, price, stock, category);
+
+    Name = validated.Name;
+    Price = validated.Price;
+    Stock = validated.Stock;
+    Category = validated.Category;
   }
 }

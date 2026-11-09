@@ -154,3 +154,4 @@ D:\Koda\minitasks\minitask-asp-net\koda-b1-efcore-dotnet1\src\EfCore1\obj\Debug\
 D:\Koda\minitasks\minitask-asp-net\koda-b1-efcore-dotnet1\src\EfCore1\obj\Debug\net10.0\EfCore1.pdb
 D:\Koda\minitasks\minitask-asp-net\koda-b1-efcore-dotnet1\src\EfCore1\obj\Debug\net10.0\EfCore1.genruntimeconfig.cache
 D:\Koda\minitasks\minitask-asp-net\koda-b1-efcore-dotnet1\src\EfCore1\obj\Debug\net10.0\ref\EfCore1.dll
+D:\Koda\minitasks\minitask-asp-net\koda-b1-efcore-dotnet1\src\EfCore1\obj\Debug\net10.0\EfCore1.sourcelink.json
