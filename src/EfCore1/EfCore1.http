@@ -1,0 +1,51 @@
+@baseUrl = http://localhost:5199
+
+### GET ALL PRODUCTS
+GET {{baseUrl}}/api/v1/products
+Accept: application/json
+
+### GET PRODUCT BY CODE
+GET {{baseUrl}}/api/v1/products/PR001
+Accept: application/json
+
+### CREATE NEW PRODUCT
+POST {{baseUrl}}/api/v1/products
+Content-Type: application/json
+
+{
+  "productCode": "PR003",
+  "name": "Laptop",
+  "price": 3500000,
+  "stock": 24,
+  "category": "Electronic"
+}
+
+### UPDATE PRODUCT
+PUT {{baseUrl}}/api/v1/products/PR003
+Accept: application/json
+Content-Type: application/json
+
+{
+  "productCode": "PR003",
+  "name": "Test",
+  "price": 3500000,
+  "stock": 24,
+  "category": "Electronic"
+}
+
+
+### DELETE PRODUCT
+DELETE {{baseUrl}}/api/v1/products/PR001
+Accept: application/json
+
+
+### Upload Gambar
+POST {{baseUrl}}/api/v1/products/PR002/image
+Content-Type: multipart/form-data; boundary=ErrorHandling
+
+--ErrorHandling
+Content-Disposition: form-data; name="file"; filename="mawar.jpg"
+Content-Type: image/jpeg
+
+< C:\Downloads\mawar.jpg
+--ErrorHandling--
